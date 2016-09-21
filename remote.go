@@ -15,7 +15,7 @@ type IP struct {
 }
 
 // GetIP returns the remote IP for the given http.Request. It checks optional CF-Connecting-IP and X-FORWARDED-FOR headers.
-func getIP(r *http.Request) *IP {
+func GetIP(r *http.Request) *IP {
 	info := &IP{}
 
 	cloudflareIP := r.Header.Get("CF-Connecting-IP")
